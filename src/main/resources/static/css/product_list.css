@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  外枠
+--------------------------------------------------*/
+.container {
+  margin-top: 40px;
+}
+
+.container-inner {
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  メインヘッダー部分
+--------------------------------------------------*/
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索欄  >  全体
+--------------------------------------------------*/
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+@media (max-width: 1200px) {
+  .search-bar-container {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索欄  >  フォーム部分
+--------------------------------------------------*/
+.seach-form {
+  display: flex;
+  column-gap: 10px;
+}
+@media (max-width: 1200px) {
+  .seach-form {
+    margin-top: 10px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索欄  >  検索ボタン
+--------------------------------------------------*/
+.search-button {
+  width: 100px;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  タイトル表示位置
+--------------------------------------------------*/
+.title-container {
+  margin-right: auto;
+}
+@media (max-width: 1200px) {
+  .title-container {
+    margin: 0 auto;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索結果  >  全体
+--------------------------------------------------*/
+.product-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+}
+@media (max-width: 1200px) {
+  .product-container {
+    grid-template-columns: 300px 300px;
+  }
+}
+@media (max-width: 800px) {
+  .product-container {
+    grid-template-columns: 300px;
+    gap: 20px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索結果  >  サムネイル
+--------------------------------------------------*/
+.product-list-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索結果  >  カテゴリ
+--------------------------------------------------*/
+.product-category {
+  margin-top: 12px;
+}
+
+.product-tag {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: var(--color-gray-700);
+  color: var(--color-basic-white);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索結果  >  商品名
+--------------------------------------------------*/
+.product-name {
+  margin-top: 8px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品一覧  >  検索結果  >  商品価格
+--------------------------------------------------*/
+.product-price {
+  font-size: 18px;
+}

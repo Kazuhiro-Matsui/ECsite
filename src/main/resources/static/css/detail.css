@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  外枠
+--------------------------------------------------*/
+.container-wrapper {
+  margin: 40px auto;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  タイトル表示位置
+--------------------------------------------------*/
+.title-container {
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .title-container {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  詳細全体
+--------------------------------------------------*/
+.detail-container {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 1200px) {
+  .detail-container {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  商品画像
+--------------------------------------------------*/
+.product-detail-image img {
+  width: 600px;
+  height: 700px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  詳細内部
+--------------------------------------------------*/
+.detail-container-inner {
+  width: 560px;
+}
+@media (max-width: 1200px) {
+  .detail-container-inner {
+    margin-top: 4px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  商品名
+--------------------------------------------------*/
+.product-detail-name {
+  margin-top: 12px;
+  font-size: 30px;
+}
+@media (max-width: 1200px) {
+  .product-detail-name {
+    margin-top: 4px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  価格
+--------------------------------------------------*/
+.product-detail-price {
+  margin-top: 12px;
+  font-size: 22px;
+}
+@media (max-width: 1200px) {
+  .product-detail-price {
+    margin-top: 4px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  説明
+--------------------------------------------------*/
+.product-detail-description {
+  margin-top: 30px;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .product-detail-description {
+    margin-top: 20px;
+  }
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  数量指定  >  外枠
+--------------------------------------------------*/
+.count-container {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 1200px) {
+  .count-container {
+  justify-content: center;
+  }
+}
+
+.count-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  数量指定  >  ラベル
+--------------------------------------------------*/
+.count-label {
+  font-size: 17px;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  数量指定  >  入力欄
+--------------------------------------------------*/
+.input-count {
+  width: 60px;
+  padding: 14px 2px 14px 14px;
+  border: 1px solid var(--color-basic-white);
+  border-radius: 8px;
+  background-color: var(--color-basic-white);
+  font-size: 16px;
+  text-align: center;
+}
+
+/*--------------------------------------------------
+  ショップ  >  商品詳細  >  ボタン項目
+--------------------------------------------------*/
+.button-content {
+  margin-top: 68px;
+}
+
+.previous-button {
+  display: flex;
+  justify-content: center;
+}

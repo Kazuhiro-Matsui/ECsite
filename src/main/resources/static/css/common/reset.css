@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+  ショップ  >  リセット
+----------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 全要素の幅・高さにpaddingとborderを含める */
+}
+
+body,div,
+h1,
+form,
+input,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+input {
+  border: none;
+  border-radius: 0;
+  background-color: inherit;
+  color: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+a {
+  color: inherit;  /* 親要素から引き継ぐ */
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font-size: 100%;
+  font-weight: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}

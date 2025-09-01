@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>注文完了</title>
+  <!-- (CSS読み込み) -->
+  <link rel="stylesheet" href="/css/common/reset.css">
+  <link rel="stylesheet" href="/css/common/variable.css">
+  <link rel="stylesheet" href="/css/common/base.css">
+  <link rel="stylesheet" href="/css/common/header.css">
+  <link rel="stylesheet" href="/css/common/footer.css">
+  <link rel="stylesheet" href="/css/common/parts.css">
+  <link rel="stylesheet" href="/css/complete.css">
+</head>
+
+<body>
+
+  <!-- (ヘッダー 開始) -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        ShopSite
+      </div>
+    </div>
+  </header>
+  <!-- (ヘッダー 終了) -->
+
+
+  <!-- (メイン 開始) -->
+  <main class="main-container">
+    <div class="complete-container">
+
+      <!-- (タイトル 開始) -->
+      <div class="title-container">
+        <h1 class="common-title">注文完了</h1>
+      </div>
+      <div class="order-details">
+        <h2>注文内容</h2>
+        <p>注文日時: <span th:text="${orderedAt}"></span></p>
+        <p>商品名: <span th:text="${productName}"></span></p>
+        <p>数量: <span th:text="${orderCount}"></span></p>
+      </div>
+      <!-- (注文完了メッセージ 開始) -->
+      <div class="complete-message">
+        <p>ご注文ありがとうございました。</p>
+      </div>
+      <!--注文完了メッセージ 終了) -->
+
+      <!-- (ボタンエリア 開始) -->
+      <div class="button-content">
+        <div class="previous-button">
+          <a href="/ecsite/product">
+            <!-- (商品一覧へ戻るボタン 開始) -->
+            <button type="button" class="common-button">
+              商品一覧へ戻る
+            </button>
+            <!-- (商品一覧へ戻るボタン 終了) -->
+          </a>
+        </div>
+      </div>
+      <!-- (ボタンエリア 終了) -->
+
+    </div>
+  </main>
+  <!-- (メイン 終了) -->
+
+
+  <!-- (フッター 開始) -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <small class="footer-copy">
+        &copy; internous All Rights Reserved.
+      </small>
+
+
+    </div>
+  </footer>
+  <!-- (フッター 終了) -->
+
+</body>
+
+</html>

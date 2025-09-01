@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  外枠
+----------------------------------------------*/
+.main-container {
+  width: 660px;
+  margin: 0 auto;
+}
+
+.complete-container {
+  margin: 65px 0px;
+  padding: 40px 0px 48px 0px;
+}
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  タイトル表示位置
+----------------------------------------------*/
+.title-container {
+  text-align: center;
+}
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  本文
+----------------------------------------------*/
+.complete-message {
+  margin-top: 42px;
+  text-align: center;
+}
+
+/* 最初のpタグにのみ適用 */
+.complete-message p:first-child {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  注文番号
+----------------------------------------------*/
+.order-number {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.order-number-label {
+  font-size: 20px;
+}
+
+.order-number-value {
+  color: var(--color-gray-800);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  注文詳細
+----------------------------------------------*/
+.order-details {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--color-gray-50);
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-200);
+}
+
+.order-details h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-gray-800);
+}
+
+.order-details p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+
+.order-details p:last-child {
+  margin-bottom: 0;
+}
+
+/*----------------------------------------------
+  ショップ  >  注文完了  >  ボタン項目
+----------------------------------------------*/
+.button-content {
+  margin-top: 42px;
+}
+
+.previous-button {
+  display: flex;
+  justify-content: center;
+}

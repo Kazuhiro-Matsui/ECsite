@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*------------------------------------------------------
+  ショップ  >  共通部品  >  入力欄  >  テキスト
+------------------------------------------------------*/
+.common-input-text {
+  width: 100%;
+  height: 48px;
+  padding: 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-gray-050);
+  font-size: 14px;
+}
+.common-input-text::placeholder {
+  color: var(--color-gray-400);
+}
+.common-input-text:focus {
+  border: 1px solid var(--color-gray-600);
+}
+
+/*------------------------------------------------------
+  ショップ  >  共通部品  >  入力欄  >  テキストエリア
+------------------------------------------------------*/
+.common-input-textarea {
+  width: 100%;
+  height: 252px;
+  padding: 8px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-gray-050);
+  font-size: 14px;
+}
+.common-input-textarea::placeholder {
+  color: var(--color-gray-400);
+}
+.common-input-textarea:focus {
+  border: 1px solid var(--color-gray-600);
+}
+
+/*------------------------------------------------------
+  ショップ  >  共通部品  >  タイトル
+------------------------------------------------------*/
+.common-title {
+  height: 50px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------
+  ショップ  >  共通部品  >  タグ  >  汎用
+------------------------------------------------------*/
+.common-tag {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--color-gray-600);
+  color: var(--color-basic-white);
+  line-height: 16px;
+}
+
+/*------------------------------------------------------
+  ショップ  >  共通部品  >  ボタン  >  汎用
+------------------------------------------------------*/
+.common-button {
+  width: 200px;
+  height: 48px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--color-basic-black);
+  color: var(--color-basic-white);
+}
+.common-button:hover {
+  background-color: var(--color-gray-700);
+}

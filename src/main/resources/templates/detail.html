@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>商品詳細</title>
+  <!-- (CSS読み込み) -->
+  <link rel="stylesheet" href="/css/common/reset.css">
+  <link rel="stylesheet" href="/css/common/variable.css">
+  <link rel="stylesheet" href="/css/common/base.css">
+  <link rel="stylesheet" href="/css/common/header.css">
+  <link rel="stylesheet" href="/css/common/footer.css">
+  <link rel="stylesheet" href="/css/common/parts.css">
+  <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+
+  <!-- (ヘッダー 開始) -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        ShopSite
+      </div>
+    </div>
+  </header>
+  <!-- (ヘッダー 終了) -->
+
+
+  <!-- (メイン 開始) -->
+  <main class="container-wrapper">
+
+    <!-- (タイトル) -->
+    <div class="title-container">
+      <h1 class="common-title">商品詳細</h1>
+    </div>
+
+    <!-- (商品詳細エリア 開始) -->
+    <div class="detail-container">
+
+      <!-- (商品画像 開始) -->
+      <div class="product-detail-image">
+        <!--【Ｑ１】product（商品1件） から更に productImagePath の値を取得 -->
+        <img th:src="@{${product.productImagePath}}" alt="商品画像">
+      </div>
+      <!-- (商品画像 終了) -->
+
+      <!-- (商品の内容 開始) -->
+      <div class="detail-container-inner">
+
+        <!--【Ｑ２】product（商品1件） から更に categoryName の値を取得 -->
+        <div th:text="${product.categoryName}" class="common-tag"></div>
+
+        <!--【Ｑ３】product（商品1件） から更に productName の値を取得 -->
+        <div th:text="${product.productName}" class="product-detail-name"></div>
+
+        <!--【Ｑ４】product（商品1件） から更に productPrice の値を取得 -->
+        <div th:text="${product.productPrice}" class="product-detail-price format-price"></div>
+
+        <!--【Ｑ５】product（商品1件） から更に productDescription の値を取得 -->
+        <div th:text="${product.productDescription}" class="product-detail-description"></div>
+
+        <!-- (商品数量指定フォーム 開始) -->
+        <!--【Ｑ６】値の送信先URLとして「http://localhost:8080/ecsite/order」を指定 -->
+        <form action="/ecsite/order" class="count-container">
+
+          <!-- (注文する商品の数量入力エリア 開始) -->
+          <div class="count-input-container">
+
+            <!-- (数量指定ラベル) -->
+            <div class="count-label">
+              数量
+            </div>
+            <!-- (注文する商品の数量入力欄 (初期値:1 最小:1 最大99)) -->
+            <input type="number" name="orderCount" value="1" max="99" min="1" class="input-count" />
+
+          </div>
+          <!-- (注文する商品の数量入力エリア 終了) -->
+
+          <!--【Ｑ７】注文に必要なパラメータ(商品ID)を非表示で送信 -->
+          <input type="hidden" name="productId" th:value="${product.productId}">
+          <input type="hidden" name="productName" th:value="${product.productName}">
+
+          <!-- (注文を確定して送信するボタン) -->
+          <button type="submit" class="common-button">
+            注文する
+          </button>
+
+        </form>
+        <!-- (商品数量指定フォーム 終了) -->
+
+      </div>
+      <!-- (商品の内容 終了) -->
+
+    </div>
+    <!-- (商品詳細エリア 終了) -->
+
+    <!-- (ボタンエリア 開始) -->
+    <div class="button-content">
+      <div class="previous-button">
+        <a href="/ecsite/product">
+          <!-- (商品一覧へ戻るボタン) -->
+          <button type="button" class="common-button">
+            商品一覧へ戻る
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- (ボタンエリア 終了) -->
+
+  </main>
+  <!-- (メイン 終了) -->
+
+
+  <!-- (フッター 開始) -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <small class="footer-copy">
+        &copy; internous All Rights Reserved.
+      </small>
+
+    </div>
+  </footer>
+  <!-- (フッター 終了) -->
+
+  <!-- (JavaScript読み込み) -->
+  <script src="/js/formatPrice.js"></script>
+</body>
+
+</html>

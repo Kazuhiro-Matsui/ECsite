@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>商品一覧</title>
+  <!-- (CSS読み込み) -->
+  <link rel="stylesheet" href="/css/common/reset.css">
+  <link rel="stylesheet" href="/css/common/variable.css">
+  <link rel="stylesheet" href="/css/common/base.css">
+  <link rel="stylesheet" href="/css/common/header.css">
+  <link rel="stylesheet" href="/css/common/footer.css">
+  <link rel="stylesheet" href="/css/common/parts.css">
+  <link rel="stylesheet" href="/css/product_list.css">
+</head>
+
+<body>
+
+  <!-- (ヘッダー 開始) -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        ShopSite
+      </div>
+    </div>
+  </header>
+  <!-- (ヘッダー 終了) -->
+
+
+  <!-- (メイン 開始) -->
+  <main class="container">
+    <div class="container-inner">
+
+      <!-- (メインヘッダー 開始) -->
+      <div class="main-header">
+        <div class="title-container">
+          <h1 class="common-title">商品一覧</h1>
+        </div>
+      </div>
+      <!-- (メインヘッダー 終了) -->
+
+      <!-- (商品一覧エリア 開始) -->
+      <div class="product-container">
+
+        <!--【Ｑ１】【Ｑ２】レスポンスとして返ってきた productList の全件を１件ずつ取り出して変数 product に格納 -->
+        <div th:each="product : ${productList}" class="product">
+
+          <!-- 商品のサムネイル画像（リンク） 開始 -->
+          <a th:href="@{/ecsite/detail(productId=${product.productId})}">
+            <div class="product-list-image">
+              <img th:src="@{${product.productImagePath}}">
+            </div>
+          </a>
+          <!-- 商品のサムネイル画像（リンク） 終了 -->
+
+          <div class="product-category">
+            <!-- product（商品1件）の categoryName の値を取得 -->
+            <div th:text="${product.categoryName}" class="common-tag"></div>
+          </div>
+
+          <div class="product-name">
+            <!-- product（商品1件）の productName の値を取得 -->
+            <div th:text="${product.productName}" class="label"></div>
+          </div>
+
+          <div class="product-price">
+            <!-- product（商品1件）の productPrice の値を取得 -->
+            <div th:text="${product.productPrice}" class="format-price"></div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- (商品一覧エリア 終了) -->
+
+    </div>
+  </main>
+  <!-- (メイン 終了) -->
+
+
+  <!-- (フッター 開始) -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <small class="footer-copy">
+        &copy; internous All Rights Reserved.
+      </small>
+
+    </div>
+  </footer>
+  <!-- (フッター 終了) -->
+
+  <!-- (JavaScript読み込み) -->
+  <script src="/js/formatPrice.js"></script>
+</body>
+
+</html>

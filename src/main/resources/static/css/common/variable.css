@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+  ショップ  >  変数定義  >  色
+----------------------------------------*/
+/* 汎用: 背景色 */
+:root {
+  --color-bg-main: #F1EEEE;
+}
+
+/* 汎用: 黒白 */
+:root {
+  --color-basic-black: #333333;
+  --color-basic-white: #FAF8FF;
+}
+
+/* Grayグラデーション */
+:root {
+  --color-gray-900: #2C2A26;
+  --color-gray-800: #413E37;
+  --color-gray-700: #555148;
+  --color-gray-600: #7C7669;
+  --color-gray-500: #90897C;
+  --color-gray-400: #A8A399;
+  --color-gray-300: #C5C2BB;
+  --color-gray-200: #D9D7D2;
+  --color-gray-100: #E9E8E5;
+  --color-gray-050: #F7F7F6;
+}

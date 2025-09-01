@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Webフォント読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*----------------------------------------
+  ショップ  >  ベース  >  背景色
+----------------------------------------*/
+body {
+  background-color: var(--color-bg-main);
+}
+
+/*----------------------------------------
+  ショップ  >  ベース  >  フォント
+----------------------------------------*/
+body {
+  color: var(--color-basic-black);
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+}
