@@ -129,7 +129,7 @@ mav.setViewName("complete");
 
 ## 4. データベース構造（推定）
 
-`application.properties` の接続先は `ec_practice` データベース。コードから読み取れるテーブル定義は以下のとおり。
+`application.properties` の接続先は `ec_practice` データベース。テーブル定義は以下のとおり。
 
 ### `product` テーブル
 | カラム                | 型 (推定)    | 内容           |
@@ -154,7 +154,7 @@ mav.setViewName("complete");
 | `order_count` | INT         | 注文数         |
 | `ordered_at`  | DATETIME    | 注文日時 (now()) |
 
-> ℹ️ テーブル作成 DDL は本リポジトリには同梱されていないため、上記は Java/SQL コードから推定したスキーマです。実行時には `ec_practice` データベースを手動で作成し、上記スキーマに従って各テーブルを用意する必要があります（→ 改善案として後述）。
+> ℹ️ テーブル作成 DDL は本リポジトリには同梱されていないため、実行時には `ec_practice` データベースを手動で作成し、上記スキーマに従って各テーブルを用意する必要があります（→ 改善案として後述）。
 
 ---
 
